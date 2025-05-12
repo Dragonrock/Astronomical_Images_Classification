@@ -11,14 +11,10 @@ This repository contains the **`Final.ipynb`** notebook and auxiliary scripts us
 git clone https://github.com/Dragonrock/Astronomical_Images_Classification
 cd Astronomical_Images_Classification
 
-# 2. Create & activate a Python ≥3.9 environment (recommended)
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
-
-# 3. Install all dependencies
+# 2. Install all dependencies
 pip install -r requirements.txt
 
-# 4. Launch the notebook
+# 3. Launch the notebook
 jupyter notebook Final.ipynb
 ```
 
