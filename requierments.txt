@@ -1,0 +1,14 @@
+PyWavelets
+joblib
+matplotlib
+numba
+numpy
+opencv-python
+pandas
+requests
+scikit-image
+scikit-learn
+scipy
+seaborn
+tqdm
+xgboost
