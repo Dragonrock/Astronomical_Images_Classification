@@ -1,6 +1,6 @@
 # Astronomical Image Classification – User Manual
 
-This repository contains the **`Final.ipynb`** notebook and auxiliary scripts used to build an end‑to‑end pipeline for **star vs galaxy classification** with Sloan Digital Sky Survey (SDSS) imaging.
+This repository contains the **`Astro_Classifier.ipynb`** notebook and auxiliary scripts used to build an end‑to‑end pipeline for **star vs galaxy classification** with Sloan Digital Sky Survey (SDSS) imaging.
 
 ---
 
