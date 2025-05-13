@@ -1,6 +1,6 @@
 # Astronomical Image Classification – User Manual
 
-This repository contains the **`Final.ipynb`** notebook and auxiliary scripts used to build an end‑to‑end pipeline for **star vs galaxy classification** with Sloan Digital Sky Survey (SDSS) imaging.
+This repository contains the **`Astro_Classifier.ipynb`** notebook and auxiliary scripts used to build an end‑to‑end pipeline for **star vs galaxy classification** with Sloan Digital Sky Survey (SDSS) imaging.
 
 ---
 
@@ -14,7 +14,11 @@ cd Astronomical_Images_Classification
 # 2. Install all dependencies
 pip install -r requirements.txt
 
-# 3. Launch the notebook
+# 3. Unzip any dataset files
+unzip dataset
+unzip astro_processing/denoised_dataset.zip
+unzip astro_processing/edge_maps.zip
+# 4. Launch the notebook
 jupyter notebook Final.ipynb
 ```
 
@@ -31,12 +35,12 @@ All outputs are written **relative to the project root**, so you can run everyth
 │  └─ metadata.csv                # One row per object
 ├─ astro_processing/
 │  ├─ denoised_dataset/           # Noise‑reduced images
-│  ├─ edges/                      # Edge maps
+│  ├─ edge_maps/                  # Canny edge maps
 │  └─ features/                   # ⚙︎ CSV feature tables
 │     ├─ features_step1.csv
 │     ├─ features_step2.csv
 │     └─ features_step3.csv
-└─ models/                        # Trained classifiers (optional)
+└─ models/                        # Trained classifiers 
 ```
 
 ---
@@ -81,19 +85,9 @@ model  = load('models/gb_model.joblib')
 
 ---
 
-## 6. Troubleshooting
 
-| Symptom                                          | Likely cause                     | Fix                                                        |
-| ------------------------------------------------ | -------------------------------- | ---------------------------------------------------------- |
-| `URLError: <urlopen error ...>` during Chapter 0 | SDSS API throttling              | Reduce `TOP`, wait a few minutes, or run off‑peak          |
-| CUDA / OpenCL errors when running CV2            | OpenCV built without GPU support | Ignore (CPU path works) or install `opencv-contrib-python` |
-| `MemoryError` in Chapter 3 segmentation          | Image batch too large            | Lower `BATCH_SIZE` or increase swap                        |
 
----
-
-## 7. License & citation
+## 6. License & citation
 
 Code released under the MIT License.
 If you use this pipeline in an academic work please cite the SDSS data release and this repository.
-
-Enjoy exploring the universe!
